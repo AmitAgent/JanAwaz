@@ -12,9 +12,9 @@ Submission: Never without explicit citizen approval.
 Security: A CA Number alone never grants access to complaint history.
 Aadhaar: Not required for MVP.
 
-Current phase: Phase 2 - Connections
-Completed: Phase 0 foundation, Phase 1 database (models, migrations, services)
+Current phase: Phase 2 - Connections (done, pending merge)
+Completed: Phase 0 foundation, Phase 1 database (models, migrations, services), Phase 2 connections
 Current task: none
 Tests: see docs/BUILD_STATUS.md
-Next task: 2.1 (see docs/phases/phase-2-connections.md)
+Next task: Phase 3 (see docs/phases/phase-3-media.md)
 Important decisions: See docs/DECISIONS.md

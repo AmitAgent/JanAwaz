@@ -7,9 +7,10 @@ from app.db.base import Base, TimestampMixin, UUIDPrimaryKeyMixin
 
 
 class Complaint(UUIDPrimaryKeyMixin, TimestampMixin, Base):
-    """A citizen complaint. Phase 1 supports drafts only.
+    """A citizen complaint. Drafts only for now.
 
-    The link to a consumer connection is added in Phase 2/3, once that table exists.
+    `connection_id` is optional: a draft may exist before the citizen picks a connection.
+    The service layer only allows a connection the complaint's user has linked.
     """
 
     __tablename__ = "complaints"
@@ -17,6 +18,9 @@ class Complaint(UUIDPrimaryKeyMixin, TimestampMixin, Base):
 
     user_id: Mapped[uuid.UUID] = mapped_column(
         Uuid, ForeignKey("users.id", ondelete="RESTRICT"), index=True, nullable=False
+    )
+    connection_id: Mapped[uuid.UUID | None] = mapped_column(
+        Uuid, ForeignKey("connections.id", ondelete="RESTRICT"), index=True, nullable=True
     )
     status: Mapped[str] = mapped_column(String(32), default="draft", nullable=False)
     category: Mapped[str | None] = mapped_column(String(64), nullable=True)

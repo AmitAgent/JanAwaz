@@ -9,6 +9,7 @@ Modular monolith: `backend/` (FastAPI) + `frontend/` (Next.js). See `docs/` for 
 | Phase | Scope | State |
 | ----- | ----- | ----- |
 | 1 | Backend foundation: database models, Alembic migrations, service layer, tests | Done |
+| 2 | Connections: DISCOM + CA Number, user links, access rule | Done |
 
 Phase details live in `docs/phases/` (see `docs/phases/phase-1-backend.md`).
 

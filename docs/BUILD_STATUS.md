@@ -25,6 +25,19 @@ Checks run on the dev machine (2026-11-20):
 
 Merged in PR #1 (`feature/phase-1-database`).
 
+## Phase 2 — Connections: DONE (pending PR merge)
+
+- [x] 2.1 `connections` and `user_connections` tables, `complaints.connection_id`, migration `0002`
+- [x] 2.2 CA Number normalization and validation
+- [x] 2.3 Services: link/find connection, own complaints per connection, audit events
+- [x] 2.4 Access rule: CA Number alone grants nothing; links expose only the user's own complaints
+- [x] 2.5 `POST /connections/validate` (stateless)
+- [x] 2.6 Tests and docs (DATA_MODEL, API_CONTRACT, DECISIONS)
+- [ ] Link/list endpoints: waiting for authentication (login/OTP)
+
+Checks (2026-11-20): `pytest -q` 35 passed; ruff check and format clean; `0002` upgrade, downgrade
+and re-upgrade verified on PostgreSQL 16.
+
 ## Next task
 
-Phase 2 (see `docs/phases/`).
+Phase 3 (see `docs/phases/phase-3-media.md`), or authentication if you want the link endpoints first.
