@@ -12,3 +12,5 @@ node_modules/
 next-env.d.ts
 .DS_Store
 *.egg-info/
+.venv/
+*.egg-info/
