@@ -17,7 +17,7 @@ Phase details live in `docs/phases/` (see `docs/phases/phase-1-backend.md`).
 ### Database (PostgreSQL)
 
 ```
-docker run -d --name janawaz-pg -p 5433:5433 \
+docker run -d --name janawaz-pg -p 5433:5432 \
   -e POSTGRES_USER=janawaz -e POSTGRES_PASSWORD=janawaz -e POSTGRES_DB=janawaz \
   postgres:16
 cp .env.example .env
